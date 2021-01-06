@@ -13,11 +13,24 @@ namespace MVC_Console.Views
                 Console.WriteLine($"Código: {item.Codigo}");
                 Console.WriteLine($"Produto: {item.Nome}");
                 Console.WriteLine($"Preço: R$ {item.Preco}");
-                
-                
-                
-                
+                Console.WriteLine();
             }
         }
+        
+        public Produto CadastrarProduto() {
+            Produto produto = new Produto();
+
+            Console.WriteLine($"Digite um código: ");
+            produto.Codigo = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Digite um nome para o produto: ");
+            produto.Nome = Console.ReadLine();
+
+            Console.WriteLine($"Digite o preço do produto: ");
+            produto.Preco = float.Parse(Console.ReadLine());
+
+            return produto;
+        }
+        
     }
 }

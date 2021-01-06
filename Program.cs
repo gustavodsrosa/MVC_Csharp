@@ -10,6 +10,7 @@ namespace MVC_Console
         {
             ProdutoController prod = new ProdutoController();
             prod.ListarProdutos();
+            prod.Cadastrar();
         }
     }
 }
